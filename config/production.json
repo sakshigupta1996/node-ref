@@ -1,0 +1,12 @@
+{
+  "port": "80",
+  "baseUrl":"someBaseURL",
+  "dbConfig": {
+      "hostUrl": "@cluster0.1pkyh.mongodb.net/myFirstDatabase?retryWrites=true",
+      "port": 27017,
+      "prefix":"mongodb+srv",
+      "dbName": "swym_draftOrderdb",
+      "userName": "deployment_user",
+      "password": "Passw0rd"
+    }
+}

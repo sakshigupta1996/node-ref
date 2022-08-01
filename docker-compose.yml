@@ -1,0 +1,26 @@
+services:
+  customer_sample:
+    image: swymdev.azurecr.io/node-ref:1.0.2
+    build:
+      context: .
+      dockerfile: Dockerfile
+    environment: 
+      NODE_ENV: production
+    volumes:
+      - ./config:/app/config
+    ports:
+      - 80:80
+
+  mongodb:
+    image: mongo:latest
+    command: mongod --port 27018
+    container_name: mongodb
+    restart: always
+    environment:
+        MONGO_INITDB_ROOT_USERNAME: root
+        MONGO_INITDB_ROOT_PASSWORD: Passw0rd
+        MONGO_INITDB_DATABASE: Swym
+    ports:
+        - 27018:27018
+    volumes:
+        - ./mongo-init.js:/docker-entrypoint-initdb.d/mongo-init.js:ro
