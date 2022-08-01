@@ -4,6 +4,6 @@
     "dbConfig": {
         "hostUrl": "localhost:27017",
         "port": 27017,
-        "dbName": "Swym"
+        "dbName": "testdb"
       }
 }
